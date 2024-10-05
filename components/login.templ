@@ -1,0 +1,23 @@
+package components
+
+templ Login() {
+    <style>
+        body {
+            margin: 0px;
+
+        }
+    </style>
+    @Header()
+    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+    <div style="margin-left: 3em">
+        <h2>Login</h2>
+        <form hx-post="/login" hx-target="#response">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    @Footer()
+}

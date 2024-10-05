@@ -1,0 +1,14 @@
+package components
+
+import "imladris/models"
+
+templ Home(people []models.Person) {
+    <style>
+        body {
+            margin: 0px;
+        }
+    </style>
+    @Header()
+    @People(people)
+    @Footer()
+}

@@ -1,0 +1,11 @@
+package components
+
+import "imladris/models"
+
+templ People(people []models.Person) {
+    <ul>
+    for _, person := range people {
+        <li>{ person.FirstName } { person.LastName }</li>
+    }
+    </ul>
+}
